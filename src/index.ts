@@ -7,11 +7,11 @@ const app = express();
 // Middleware to parse JSON request bodies
 app.use(express.json());
 
-app.post('/', (req, res) => {
+app.get('/', (req, res) => {
 
     return res.json(req.body);
 });
-app.get('/startCampaign', mainRouteHandler);
+app.post('/startCampaign', mainRouteHandler);
 
 
 
