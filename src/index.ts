@@ -7,7 +7,7 @@ const app = express();
 // Middleware to parse JSON request bodies
 app.use(express.json());
 
-app.get('/', (req, res) => {
+app.post('/', (req, res) => {
 
     return res.json(req.body);
 });
