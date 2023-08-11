@@ -25,15 +25,13 @@ export const mainRouteHandler: RequestHandler = async (
   req: Request,
   res: Response
 ) => {
-  console.log("started");
+  console.log(req.body);
 
-  const scheduled: boolean = req.query.scheduled
-    ?.toString()
-    .startsWith("true")!;
+  const scheduled: boolean = req.body.scheduled;
 
-  const id: string = req.query.id?.toString()!;
+  const id: string = req.body.id;
 
-  const type: string = req.query.type?.toString()!;
+  const type: string = req.body.type;
 
   try {
     const camp = await pb.collection("campaign").getOne(id);
