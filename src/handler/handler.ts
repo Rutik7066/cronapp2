@@ -25,7 +25,7 @@ export const mainRouteHandler: RequestHandler = async (
   req: Request,
   res: Response
 ) => {
-  console.log(req.body);
+  console.debug(JSON.stringify(req.body, null, 2));
 
   const scheduled: boolean = req.body.scheduled;
 

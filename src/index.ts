@@ -5,7 +5,7 @@ import { mainRouteHandler } from "./handler/handler.js";
 const app = express();
 
 // Middleware to parse JSON request bodies
-app.use(express.json());
+app.use(bodyParser.json());
 
 app.post('/', (req, res) => {
 
