@@ -2,7 +2,7 @@ import { Record } from "pocketbase";
 import { pocketbase_url, whatsapp_backend_url } from "./const.js";
 import pb from "./pocketbase.js";
 import { fetchAndConvertToBase64, pauseLoop } from "./utils.js";
-import { y } from "./tests.js";
+
 
 export const connect = async (user: Record) => {
   const re = await fetch(`${whatsapp_backend_url}/session/connect`, {
